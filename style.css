@@ -85,6 +85,38 @@ body{
     border-left: none;
 }
 
+.four-legged{
+    display: none;
+    justify-content: space-evenly;
+}
+
+.four-legged > *{
+    height: 10rem;
+    background: red;
+    border: 0.2rem solid black;
+    border-top: none;
+    border-radius: 0 0 50% 50%;
+}
+
+.fl1{
+    width: 60%;
+    border-right: none;
+}
+.fl2{
+    width: 90%;
+    border-left: none;
+    border-right: none;
+}
+.fl3{
+    width: 90%;
+    border-left: none;
+    border-right: none;
+}
+.fl4{
+    width: 60%;
+    border-left: none;
+}
+
 @keyframes ghostFloat {
     0% {
         transform: translateY(25%)
