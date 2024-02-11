@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    border: 0px dashed green;
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background: black;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ghost-body{
+    animation: ghostFloat 1s normal infinite;
+    animation-direction: alternate;
+}
+
+.upper-body{
+    display: flex;
+    width: 30rem;
+    height: 20rem;
+    align-items: center;
+    background-color: red;
+    border: 0.2rem solid black;
+    border-bottom: none;
+    border-radius: 100rem 100rem 0 0;
+}
+
+.eyes{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.eye1, .eye2 {
+    width: 9rem;
+    height: 10rem;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pupil {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: cornflowerblue;
+    animation: pupilFloat 1s normal infinite;
+    animation-direction: alternate;
+}
+
+
+.three-legged{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.three-legged > *{
+    width: 100%;
+    height: 10rem;
+    background: red;
+    border: 0.2rem solid black;
+    border-top: none;
+    border-radius: 0 0 50% 50%;
+}
+
+.tl1{
+    border-right: none;
+}
+.tl2{
+    border-left: none;
+    border-right: none;
+}
+.tl3{
+    border-left: none;
+}
+
+@keyframes ghostFloat {
+    0% {
+        transform: translateY(25%)
+    }
+    100% {
+        transform: translateY(-25%)
+    }
+}
+
+@keyframes pupilFloat {
+    0% {
+        transform: translateY(40%)
+    }
+    100% {
+        transform: translateY(-40%)
+    }
+}
